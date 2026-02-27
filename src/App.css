@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   min-height: 100vh;
   background-color: var(--bg-color);
   background-image: 
@@ -52,7 +52,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Background animated elements for premium feel */
@@ -304,11 +305,25 @@ button:disabled {
 
 @media (max-width: 600px) {
   .game-container { 
-    padding: 30px 20px; 
+    padding: 25px 15px; 
     border-radius: 20px;
-    margin: 20px;
   }
-  h1 { font-size: 1.8rem; }
-  input[type="number"] { font-size: 2.5rem; padding: 15px; }
-  .metrics-row { flex-direction: column; gap: 15px; align-items: center; }
+  h1 { font-size: 1.6rem; margin-bottom: 20px; }
+  .metrics-row { 
+    flex-direction: row; 
+    justify-content: space-between; 
+    padding: 10px; 
+    margin-bottom: 20px;
+  }
+  .metric h3 { font-size: 0.85rem; }
+  .metric span { font-size: 1rem; padding: 2px 8px; }
+  input[type="number"] { font-size: 2.2rem; padding: 15px; }
+  .btn-guess { padding: 15px 0; }
+  .hint-box { font-size: 1rem; padding: 15px; margin-top: 20px; }
+  .btn-restart { 
+    width: 100%; 
+    font-size: 1rem; 
+    padding: 15px; 
+    margin-top: 25px; 
+  }
 }
