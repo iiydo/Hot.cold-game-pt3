@@ -41,19 +41,26 @@
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   min-height: 100vh;
   background-color: var(--bg-color);
   background-image: 
     radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
     radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
+}
+
+#root {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-  overflow-y: auto;
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* Background animated elements for premium feel */
@@ -307,6 +314,8 @@ button:disabled {
   .game-container { 
     padding: 25px 15px; 
     border-radius: 20px;
+    margin: 20px;
+    width: calc(100% - 40px);
   }
   h1 { font-size: 1.6rem; margin-bottom: 20px; }
   .metrics-row { 
