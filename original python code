@@ -1,0 +1,42 @@
+'''this project was originally built as a command-line  python game before being adapted into react web application'''
+
+
+import random
+
+r = random.randint(1, 100)
+
+while True:
+    try:
+        i = int(input("guess the number"))
+
+    except ValueError:
+        print("Please enter an integer (no decimals)!")
+        continue
+
+    if i == r:
+        print("You got it!")
+        break
+
+    if i > 100 or i < 1:
+        print("must be from 01 to 100, try again")
+
+
+    elif abs(i - r) <= 5:
+        print("pretty close!")
+    elif abs(i - r) <= 10:
+        print("close!")
+
+    elif abs(i - r) <= 20:
+        print("not that close but try again !")
+
+
+    else:
+        print("way off!")
+
+
+    if i > r:
+            print("go lower")
+
+    else:
+            print("go higher")
+
